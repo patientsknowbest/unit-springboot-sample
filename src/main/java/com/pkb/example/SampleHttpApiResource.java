@@ -64,7 +64,7 @@ public class SampleHttpApiResource extends Unit {
 
     public String someApiCall() {
         HttpGet httpGet = new HttpGet();
-        // Use the authentication token
+        // Use the authentication token we got on init
         httpGet.addHeader("some-auth", someAuthToken);
         httpGet.setURI(URI.create(mutableConfig.getHttpClientUrl()));
         try (CloseableHttpResponse closeableHttpResponse = client.execute(httpGet)) {

@@ -40,6 +40,6 @@ public class MutableConfig extends Unit {
 
     public void setHttpClientUrl(String value) {
         configs.put("http-client-url", value);
-        failed(); // fail, we'll restart
+        stop(); // causes deps to restart as well
     }
 }

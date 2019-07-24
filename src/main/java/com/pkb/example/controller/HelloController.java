@@ -39,7 +39,7 @@ public class HelloController extends Unit {
         addDependency(SampleHttpApiResource.UNIT_NAME);
 
         // Enable ourselves, we're a top-level unit
-        unchecked(() -> bus.sink().accept(message(Command.class).withTarget(UNIT_NAME).withPayload(Command.ENABLE)));
+        enable();
     }
 
 
